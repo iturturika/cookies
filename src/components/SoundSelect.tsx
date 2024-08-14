@@ -1,6 +1,6 @@
 import soundOn from '../assets/images/soundOn.svg';
 import soundOff from '../assets/images/soundOff.svg';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function SoundSelect(){
   const [onClick, setOnClick] = useState<boolean>(false);

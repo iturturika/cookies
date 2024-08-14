@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import arrow from '../assets/images/arrow.svg';
 import checkbox from '../assets/images/checkbox.svg';

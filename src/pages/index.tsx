@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import DefaultLayout from "@/layouts/default";
-import { useState } from "react";
 import backgroundImg from '../assets/images/6a34312.png';
 export default function IndexPage() {
   
