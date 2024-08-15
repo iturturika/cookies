@@ -37,3 +37,46 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.bounce {
+  position: relative;
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    top: 10px;
+  }
+  50% {
+    top: -10px; /* двигается вверх на 15 пикселей */
+  }
+}
+
+.animationCircle {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  animation: animationCircle 2s infinite;
+  -webkit-animation: animationCircle 2s infinite;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+@keyframes animationCircle {
+  0%,
+  100% {
+    width: 65%;
+    height: 65%;
+  }
+  50% {
+    width: 55%;
+    height: 55%;
+  }
+}
