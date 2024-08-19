@@ -34,10 +34,10 @@ export default function DefaultLayout({
   const [selected, setSelected] = useState<string>('Cookies');
 
   return (
-    <div className="relative flex flex-row h-screen">
+    <div className="relative flex flex-row min-h-screen">
       <aside 
         className="fixed top-0 left-0 h-screen w-64 flex flex-col items-center px-3 py-5 overflow-y-scroll justify-between"
-        style={{borderRight: '1px solid #2b2f3c'}}
+        style={{borderRight: '1px solid #2b2f3c', backgroundColor: '#151d28'}}
       >
         <Link href="/">
           <img src={logo} alt="logo" />
@@ -79,10 +79,9 @@ export default function DefaultLayout({
           <SoundSelect />
         </div>
       </aside>
-      <main className="relative ml-64 mr-0 h-screen w-full">
+      <main className="relative ml-64 mr-0 min-h-screen w-full flex flex-col gap-y-11" style={{backgroundColor: '#151d28'}}>
         {children}
       </main>
-
     </div>
   );
 }
