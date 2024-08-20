@@ -40,8 +40,8 @@ export default function DefaultLayout({
   return (
     <div className="relative flex flex-row min-h-screen">
       <aside 
-        className="fixed top-0 left-0 z-20 h-screen xl:w-64 flex-col items-center px-3 py-5 overflow-y-scroll justify-between lg:w-20 md:w-20 sm:flex sm:w-20 hidden"
-        style={onClickMenu ? {display: 'flex', borderRight: '1px solid #2b2f3c', backgroundColor: '#151d28'} : {display: 'none', borderRight: '1px solid #2b2f3c', backgroundColor: '#151d28'}}
+        className={onClickMenu ? "fixed top-0 left-0 z-50 h-screen xl:w-64 flex-col items-center px-3 py-5 overflow-y-scroll justify-between lg:w-20 md:flex md:w-20 sm:flex sm:w-20 flex" : "fixed top-0 left-0 z-50 h-screen xl:w-64 flex-col items-center px-3 py-5 overflow-y-scroll justify-between lg:w-20 md:flex md:w-20 sm:hidden sm:w-20 hidden"}
+        style={{ borderRight: '1px solid #2b2f3c', backgroundColor: '#151d28'}}
       >
         <Link href="/">
           <img src={logo} alt="logo" />
@@ -83,10 +83,10 @@ export default function DefaultLayout({
           <SoundSelect />
         </div>
       </aside>
-      <main className="relative xl:ml-64 mr-0 min-h-screen w-full flex flex-col gap-y-11 lg:ml-20 md:ml-20 sm:ml-20" style={{backgroundColor: '#151d28'}} onClick={() => {setOnClickMenu(false)}}>
+      <main className="relative xl:ml-64 mr-0 min-h-screen w-full flex flex-col gap-y-11 lg:ml-20 md:ml-20 sm:ml-0" style={{backgroundColor: '#151d28'}} onClick={() => {setOnClickMenu(false)}}>
         {children}
       </main>
-      <div className="bg-slate-700 w-max fixed bottom-5 left-1/2 -translate-x-1/2 rounded-full p-3">
+      <div className="bg-slate-700 w-max fixed bottom-5 left-1/2 -translate-x-1/2 rounded-full p-3 z-40 md:hidden">
         <ul className="flex w-full items-end justify-between gap-x-8">
           <li className="flex flex-col justify-center items-center gap-y-1 w-9">
             <img src={bonuses} alt="bonuses" className="w-6"/>
