@@ -6,7 +6,7 @@ export default function NavButton({ icon, name, selected, setSelected }: {icon:a
       onClick={() => {setSelected(name)}}
     >
       <img src={icon} alt="icon" />
-      <p className="ml-3 font-semibold text-sm font-col" style={{color: '#96a0af'}}>{name}</p>
+      <p className="ml-3 font-semibold text-sm font-col xl:flex lg:hidden md:hidden sm:hidden" style={{color: '#96a0af'}}>{name}</p>
     </div>
   );
 }
